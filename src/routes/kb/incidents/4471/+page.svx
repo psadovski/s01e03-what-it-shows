@@ -4,7 +4,7 @@ title: '#4471 · two date problems in day-first locales'
 owner: support desk
 status: known
 reviewed: 2026-11-09
-signature: psadovski
+signature: v1.eyJzdWIiOiI2Mjc2IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTQyNTI3MTEsImV4cCI6MTc5NDMzOTExMX0.XpN0OgzN72-_mB-A8UXC-uPWyiWmygciUgQnS1hyv0Y
 ---
 
 <script>
@@ -45,4 +45,4 @@ the submitted value in day-first order. People following the hint can get a flip
 Counts include unique reports merged into #4471. The cause comes from tenant locale and booking
 form configuration. Browser locale and intake tags are not reliable cause labels.
 
-<RenderStamp signature="psadovski" />
+<RenderStamp signature="v1.eyJzdWIiOiI2Mjc2IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTQyNTI3MTEsImV4cCI6MTc5NDMzOTExMX0.XpN0OgzN72-_mB-A8UXC-uPWyiWmygciUgQnS1hyv0Y" />
