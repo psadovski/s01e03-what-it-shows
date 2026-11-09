@@ -1,0 +1,48 @@
+---
+layout: runbook
+title: '#4471 · two date problems in day-first locales'
+owner: support desk
+status: known
+reviewed: 2026-11-09
+signature: psadovski
+---
+
+<script>
+  import IncidentSummary from '#lib/kb/IncidentSummary.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+
+  const issueUrls = {
+    parser: 'https://github.com/psadovski/s01e03-what-it-shows/issues/1',
+    hint: 'https://github.com/psadovski/s01e03-what-it-shows/issues/2',
+  };
+</script>
+
+By 4 October, the desk had merged **412 reports** into #4471 and marked the ticket known. The
+export separates those reports into two problems: a shared parser that treats dates as month-first,
+and a `booking-v3` form hint that conflicts with day-first date handling.
+
+## Problems found
+
+<IncidentSummary />
+
+### Shared parser reads dates month first
+
+**379 reports.** The shared parser treats dates as month-first in day-first tenant locales. This
+can swap the day and month before a booking or calendar invite is produced. The affected paths
+include app, email, and `booking-v2` forms.
+
+<p><a href={issueUrls.parser}>Open the shared parser issue</a>.</p>
+
+### `booking-v3` form hint conflicts with day-first handling
+
+**33 reports.** The form displays `MM/DD/YYYY` for day-first tenant locales, while it interprets
+the submitted value in day-first order. People following the hint can get a flipped date.
+
+<p><a href={issueUrls.hint}>Open the booking-v3 form hint issue</a>.</p>
+
+## How the groups were counted
+
+Counts include unique reports merged into #4471. The cause comes from tenant locale and booking
+form configuration. Browser locale and intake tags are not reliable cause labels.
+
+<RenderStamp signature="psadovski" />

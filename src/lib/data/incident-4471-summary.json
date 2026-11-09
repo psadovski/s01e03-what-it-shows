@@ -1,0 +1,16 @@
+{
+  "ticket": 4471,
+  "uniqueReports": 412,
+  "causes": [
+    {
+      "key": "parser",
+      "label": "Shared parser reads dates month first",
+      "reports": 379
+    },
+    {
+      "key": "hint",
+      "label": "booking-v3 form hint conflicts with day-first handling",
+      "reports": 33
+    }
+  ]
+}
